@@ -110,7 +110,7 @@ call_user_func(
         $emConfUtility =
             \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extensionmanager\Utility\EmConfUtility::class);
         $emConf =
-            $emConfUtility->includeEmConf([
+            $emConfUtility->includeEmConf($extKey, [
                 'key' => $extKey,
                 'siteRelPath' => \TYPO3\CMS\Core\Utility\PathUtility::stripPathSitePrefix(\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::extPath($extKey)),
             ]);
